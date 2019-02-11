@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+            function randomnumber(maxValue)
+            {
+                return Math.floor(Math.random() * maxValue)
+            }
+
+            var firstName = [];
+
+            firstName.push("Bibble")
+            firstName.push("Ziggle")
+            firstName.push("Nab")
+            firstName.push("skajkjbviubriuvbisufbv")
+            firstName.push("sizzle")
+
+            var lastName = [];
+
+            lastName.push("Bob")
+            lastName.push("Zag")
+            lastName.push("burp")
+            lastName.push("zurt")
+            lastName.push("Zaglle")
+
+            var firstIndex = "";
+            var secondIndex = "";
+
+            function pickfirstName()
+            {
+                var firstIndex = firstName[randomnumber(firstName.length-1)];
+                return firstIndex;
+            }
+
+            function picklastName()
+            {
+                var secondIndex = lastName[randomnumber(lastName.length-1)];
+                return secondIndex;
+            }
+
+            function pickBoth()
+            {
+                var firstIndex = firstName[randomnumber(firstName.length-1)];
+                var secondIndex = lastName[randomnumber(lastName.length-1)];
+                return firstIndex + " " + secondIndex;
+            }
+
+        </script>
+    </head>
+    <body>
+        random name gen
+    </body>
+</html>
