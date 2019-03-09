@@ -1,0 +1,85 @@
+<html>
+
+    <head>
+        <title>The Library</title>
+    </head>
+
+    <script type="text/javascript">
+
+        class Item
+        {
+
+        }
+
+        class Library
+        {
+            constructor()
+            {
+                
+                this.items =[];
+            }
+
+            add()
+            {
+                var frmItem = document.querySelector('#libraryForm');
+                var item = this.buildItem(frmItem;
+                this.items.push(item);
+				console.table(this.items):
+                this.render():
+                return false;
+            }
+
+            buildItem(frm)
+            {
+                
+                console.log(frm);
+                var itemTypes = frm.querySelector('#selItemType').selectedOptions;
+                return {
+                    'itemType': frm.itemType.value,
+                    'title': frm.title.value
+                };
+            }
+
+            render(elementID)
+            {
+               var ul = document.querySelector('#libraryItems');
+
+               ul.innerHTML = null
+
+               this.item.forEach((item)=>{
+                   ul.appendChild(this.renderItem(item));
+               });
+
+            }
+
+            renderItem(item)
+            {
+                var li = document.createElemetn('li')
+				li.innerText = item.itemType + "-" + item.Title;
+				return li;
+				
+            }
+        }
+
+        var joshsLibrary = new Library();
+
+    </script>
+
+    <body>
+        <h1>Our Library</h1>
+        <form id="libraryForm">
+            <label for="selItemType">Item Type</label>
+            <select name="itemType" id="selItemType">
+                <option value="book">Book</option>
+            </select>
+            <label for="txtTitle">Title</label>
+            <input type="text" name="titel" id="txtTitle">
+
+            <input type="submit" name="btnAdd" value="Add" onClick="return joshsLibrary.add()">
+        </form>
+
+        <ul id="libraryItems">
+
+        </ul>
+    </body>
+</html>
