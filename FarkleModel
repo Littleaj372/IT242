@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		
+		var dice1=(int)(Math.random()*6+1);
+		var dice2=(int)(Math.random()*6+1);
+		var dice3=(int)(Math.random()*6+1);
+		var dice4=(int)(Math.random()*6+1);
+		var dice5=(int)(Math.random()*6+1);
+		var dice6=(int)(Math.random()*6+1);
+		
+		var player1="";
+		var bankedScore="";
+		var score="";
+		
+		var player2="";
+		var P2bankedScore="";
+		
+		
+		
+		</script>
+	</head>
+</html>
